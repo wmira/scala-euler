@@ -1,5 +1,7 @@
 package euler
 
+import scala.util.control._
+
 /**
  * 
  * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
@@ -8,19 +10,28 @@ package euler
  * 
  */
 object euler7 {
-	
+
+  
   def main(args : Array[String]) = {
-    var primes = 0
+
+    var primeCount = 0
     var tocheck = 1
-    while ( primes < 10001 ) {
-      if ( eulerutils.isPrime(tocheck) ) {
-        primes += 1
-        if ( primes == 10001 ) {
-          println(tocheck)
+
+    val loop = new Breaks
+
+    loop.breakable {
+      while (primeCount <= 10000) {
+        if (eulerutils.isPrime(tocheck)) {
+          primeCount += 1
+          if ( primeCount == 10001 ) {
+            loop.break
+          }
+
         }
+        tocheck += 1
       }
-      tocheck += 1
-    }      
+    }
+    println(tocheck)
   }
   
   

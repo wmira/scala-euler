@@ -16,7 +16,7 @@ object euler2 {
   
   def main(args : Array[String] ) {
     
-    var fibs = scala.collection.mutable.ListBuffer(1,2)
+    val fibs = scala.collection.mutable.ListBuffer(1,2)
     
     
     while ( nextFib(fibs) <= 4000000 ) { }

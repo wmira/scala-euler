@@ -32,7 +32,6 @@ object EulerUtils {
 
   def main(args : Array[String] ): Unit = {
     println(isPrime(29995))
-    Euler1 e = new Euler1();
-    e.solve()
+
   }
 }

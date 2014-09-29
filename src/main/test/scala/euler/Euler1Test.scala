@@ -1,13 +1,18 @@
 package euler
 
-import org.scalatest.FlatSpec
 
+import org.junit._
+import org.junit.Assert._
 /**
  *
  */
-class Euler1Test extends FlatSpec {
+class Euler1Test  {
 
-  "Euler1 answer" should " be equal to 233168 " in {
-    Euler1 euler1 = new Euler1()
+  @Test def euler1() = {
+
+    val eur1 = new Euler1
+    val result  = eur1.solve
+
+    assertEquals( 233168, result )
   }
 }

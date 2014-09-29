@@ -7,9 +7,14 @@ package euler
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  * 
  */
-object euler2 {
-	
-  def nextFib(list : scala.collection.mutable.ListBuffer[Int]) : Int = {    
+class Euler2 extends EulerSolver {
+
+
+  override def solve(): Long = {
+
+  }
+
+  def nextFib(list : scala.collection.mutable.ListBuffer[Int]) : Int = {
     list += list(list.size - 2 ) + list(list.size -1 )    
     list(list.size-1)
   }
@@ -25,6 +30,5 @@ object euler2 {
     println(result)
         
 
-    
   }
 }

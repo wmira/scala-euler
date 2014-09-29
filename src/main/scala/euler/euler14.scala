@@ -44,7 +44,7 @@ object euler14 {
     val input = 1 to 1000000
     var maxTerm = 0;
     for ( i <- input ) {
-      var collatzLength = collatz(i)      
+      val collatzLength = collatz(i)
       if ( collatzLength > maxLength ) {       
         maxTerm = i
         maxLength = collatzLength

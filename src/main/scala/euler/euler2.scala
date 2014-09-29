@@ -24,7 +24,7 @@ object euler2 {
     val result : Int = fibs.filter(e => e % 2 == 0 ).foldLeft(0) ( (total,num ) => total + num )
     println(result)
         
-     
+
     
   }
 }

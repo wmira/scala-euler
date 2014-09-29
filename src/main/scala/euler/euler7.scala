@@ -11,7 +11,8 @@ import scala.util.control._
  */
 object euler7 {
 
-  
+
+
   def main(args : Array[String]) = {
 
     var primeCount = 0
@@ -20,8 +21,9 @@ object euler7 {
     val loop = new Breaks
 
     loop.breakable {
+      //FIXME, make this a for loop
       while (primeCount <= 10000) {
-        if (eulerutils.isPrime(tocheck)) {
+        if (EulerUtils.isPrime(tocheck)) {
           primeCount += 1
           if ( primeCount == 10001 ) {
             loop.break

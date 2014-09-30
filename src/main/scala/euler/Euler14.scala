@@ -19,7 +19,7 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
  * 
  */
-object euler14 {
+class Euler14 extends EulerSolver {
 	
   def collatz(num: Long) : Long = {
     
@@ -38,7 +38,7 @@ object euler14 {
     return counter
   }
   
-  def main(args : Array[String]) = {
+  def solve() : Long = {
    
     var maxLength : Long =  0;
     val input = 1 to 1000000
@@ -50,6 +50,6 @@ object euler14 {
         maxLength = collatzLength
       }     
     }
-    println (maxTerm)
+    maxTerm
   }
 }

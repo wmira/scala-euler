@@ -12,17 +12,16 @@ package euler
  *
  *   Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
  */
-object euler6 {
+class Euler6 extends EulerSolver {
 
-  def main(args : Array[String]) = {
 
+  override def solve(): Long = {
     val range = 1 to 100
 
     val totalPow = range.map( num => BigInt(num).pow(2) ).foldLeft(0)( (total,num) => ( total + num ).intValue  )
     val totalSquareSum = BigInt(range.foldLeft(0)( (total,num) => total + num )).pow(2)
-    
-    println(totalSquareSum - totalPow)
 
-
+    (totalSquareSum - totalPow).longValue
   }
+
 }

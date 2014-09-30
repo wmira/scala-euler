@@ -9,11 +9,11 @@ import scala.util.control._
    What is the 10 001st prime number?
  * 
  */
-object euler7 {
+class Euler7 extends EulerSolver {
 
 
+  override def solve(): Long = {
 
-  def main(args : Array[String]) = {
 
     var primeCount = 0
     var tocheck = 1
@@ -33,7 +33,7 @@ object euler7 {
         tocheck += 1
       }
     }
-    println(tocheck)
+    tocheck
   }
   
   

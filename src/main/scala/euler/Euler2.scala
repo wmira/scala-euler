@@ -46,23 +46,4 @@ class Euler2(val maxSequenceValue : Int) extends EulerSolver {
     return fibSequenceList.filter(e => e % 2 == 0 ).foldLeft(0) ( (total,num ) => total + num )
   }
 
-  /*
-  def nextFib(list : scala.collection.mutable.ListBuffer[Int]) : Int = {
-    list += list(list.size - 2 ) + list(list.size -1 )    
-    list(list.size-1)
-  }
-  
-  def main(args : Array[String] ) {
-    
-    val fibs = scala.collection.mutable.ListBuffer(1,2)
-    
-    
-    while ( nextFib(fibs) <= 4000000 ) { }
-    
-    val result : Int = fibs.filter(e => e % 2 == 0 ).foldLeft(0) ( (total,num ) => total + num )
-    println(result)
-        
-
-  }
-  */
 }

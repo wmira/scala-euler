@@ -3,9 +3,7 @@ package euler
 
 import org.junit._
 import org.junit.Assert._
-/**
- *
- */
+
 class Euler1Test  {
 
   @Test def euler1() = {

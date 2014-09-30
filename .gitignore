@@ -1,6 +1,8 @@
+out/
 .idea/
 bin/
 .cache
 .classpath
 .settings/
 .project
+*.iml

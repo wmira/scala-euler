@@ -1,10 +1,9 @@
 package euler
 
 import org.junit.Test
+import org.junit.Assert.assertEquals
 
-/**
- * Created by miralabs on 9/30/2014.
- */
+
 class Euler3Test {
 
   @Test def euler3() = {

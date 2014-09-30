@@ -1,35 +1,42 @@
 package euler
 
+import scala.util.control.Breaks
+
 /**
  * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
  *
  * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
  * 
  */
-object euler5 {
+class Euler5 extends EulerSolver {
 
-  def factoredBy20(input : Int) : Boolean = {
+  def isFactorableBy1To20(input : Int) : Boolean = {
+
+    var num = 0
     for ( num <- 1 to 20 ) {
-      if ( (input % num) != 0 ) {
+      if ( input % num  != 0 ) {
         return false
       }
     }
     return true
+
   }
 
-  def main(args: Array[String]) {
+  override def solve(): Long = {
+    var numToCheck : Int = 21
 
-    var start : Int = 21
+    val loop = new Breaks
 
-    while ( true ) {
-
-      if ( factoredBy20( start ) ) {
-        println(start);
-        return
+    loop.breakable {
+      while ( true ) {
+        if ( isFactorableBy1To20(numToCheck) ) {
+          loop.break
+        }
+        numToCheck += 1
       }
-
-     start += 1
     }
-
+    return numToCheck
   }
+
+
 }

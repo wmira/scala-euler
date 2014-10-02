@@ -18,8 +18,8 @@ class Euler6 extends EulerSolver {
   override def solve(): Long = {
     val range = 1 to 100
 
-    val totalPow = range.map( num => BigInt(num).pow(2) ).foldLeft(0)( (total,num) => ( total + num ).intValue  )
-    val totalSquareSum = BigInt(range.foldLeft(0)( (total,num) => total + num )).pow(2)
+    val totalPow = range.map( num => BigInt(num).pow(2) ).sum //.foldLeft(0)( (total,num) => ( total + num ).intValue  )
+    val totalSquareSum = BigInt(range.sum).pow(2) //BigInt(range.foldLeft(0)( (total,num) => total + num )).pow(2)
 
     (totalSquareSum - totalPow).longValue
   }

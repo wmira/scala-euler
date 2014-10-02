@@ -43,7 +43,7 @@ class Euler2(val maxSequenceValue : Int) extends EulerSolver {
   }
 
   override def solve(): Long = {
-    return fibSequenceList.filter(e => e % 2 == 0 ).foldLeft(0) ( (total,num ) => total + num )
+    return fibSequenceList.filter(e => e % 2 == 0 ).sum //.foldLeft(0) ( (total,num ) => total + num )
   }
 
 }

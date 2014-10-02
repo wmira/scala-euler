@@ -55,19 +55,23 @@ class Euler8 extends EulerSolver {
 
     //no point going past the last 13 digits as we wont go past 13 duh
     var maxProduct : BigDecimal = 0;
-    var products =  new scala.collection.mutable.ArrayBuffer[BigDecimal]
+    var products =  new scala.collection.mutable.ArrayBuffer[BigInt]
    	for ( i <- 0 until input.length - 12 ) {
       //if we use toInt on map here, it will return the ascii int!!!! so we need to do asDigit
-      products += (input.slice(i,i+13).map(i => BigDecimal(i.asDigit)).foldLeft(BigDecimal(1))((total: BigDecimal,input: BigDecimal) => total * input ))    	               
+      products += (input.slice(i,i+13).map(i => BigInt(i.asDigit)).foldLeft(BigInt(1))((total: BigInt,input: BigInt) => total * input ))
      
     }
-    products.foreach( product => {      
+
+    products.max.longValue
+    /*
+    products.foreach( product => {
       if ( product > maxProduct ) {
         maxProduct = product
       }
     })
     
     maxProduct.longValue
+    */
     
     
   }

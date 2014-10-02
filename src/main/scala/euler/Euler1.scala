@@ -13,7 +13,7 @@ class Euler1 extends EulerSolver{
   override def solve(): Long = {
 
     val arr = 1 to 999 //1 to 999, inclusive
-    return arr.filter( num => num % 3 == 0 || num % 5 == 0 ).foldLeft(0)( (total,num) => total + num )
+    return arr.filter( num => num % 3 == 0 || num % 5 == 0 ).sum //.foldLeft(0)( (total,num) => total + num )
 
   }
 

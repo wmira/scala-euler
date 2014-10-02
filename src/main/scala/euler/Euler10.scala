@@ -19,9 +19,8 @@ class Euler10 extends EulerSolver {
       }
     }
 
-    var sum : Long = 0
-    primesBelow2M.foreach( prime => sum += prime )
 
-    return sum
+    primesBelow2M.sum
+
   }
 }

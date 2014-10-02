@@ -42,14 +42,17 @@ class Euler14 extends EulerSolver {
    
     var maxLength : Long =  0;
     val input = 1 to 1000000
-    var maxTerm = 0;
+   
+    val terms = new scala.collection.mutable.ArrayBuffer[BigInt]
     for ( i <- input ) {
+
       val collatzLength = collatz(i)
-      if ( collatzLength > maxLength ) {       
-        maxTerm = i
+      if ( collatzLength > maxLength ) {
         maxLength = collatzLength
+        terms += i
       }     
     }
-    maxTerm
+
+    terms.max.longValue
   }
 }

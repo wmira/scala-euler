@@ -9,7 +9,7 @@ class Euler3Test {
   @Test def euler3() = {
 
     val euler = new Euler3
-    assertEquals(0,euler.solve)
+    assertEquals(6857,euler.solve)
 
   }
 

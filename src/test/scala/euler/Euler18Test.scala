@@ -6,7 +6,12 @@ import org.junit.Assert.assertEquals
 /**
  * Created by miralabs on 10/6/2014.
  */
-class Euler18Test {
+class Euler18Test extends EulerTest {
+
+  override def solverAnswer : Long = 1074L
+  override def createSolver() : EulerSolver = new Euler18
+
+
 
   @Test def testTriNode() = {
     val leftNode = new TriNode(1,1,25,null,null)
@@ -19,8 +24,5 @@ class Euler18Test {
     assertEquals(30,triNode.computeMaxTotal)
   }
 
-  @Test def euler18() = {
-    val euler = new Euler18;
-    assertEquals(1074,euler.solve)
-  }
+
 }

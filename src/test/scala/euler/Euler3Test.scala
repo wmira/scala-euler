@@ -1,16 +1,12 @@
 package euler
 
-import org.junit.Test
-import org.junit.Assert.assertEquals
 
 
-class Euler3Test {
+class Euler3Test extends EulerTest {
 
-  @Test def euler3() = {
+  def solverAnswer : Long = 6857L
+  def createSolver() : EulerSolver = new Euler3
 
-    val euler = new Euler3
-    assertEquals(6857,euler.solve)
 
-  }
 
 }

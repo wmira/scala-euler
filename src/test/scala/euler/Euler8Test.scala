@@ -6,13 +6,11 @@ import org.junit.Assert.assertEquals
 /**
  *
  */
-class Euler8Test {
+class Euler8Test extends EulerTest {
 
-  @Test def euler8() = {
+  override def solverAnswer : Long = 23514624000L
+  override def createSolver() : EulerSolver = new Euler8
 
-    val euler = new Euler8
-    assertEquals(23514624000L,euler.solve)
 
-  }
 
 }

@@ -4,15 +4,11 @@ import org.junit.Assert._
 import org.junit.Test
 
 /**
- * Created by miralabs on 9/30/2014.
+ *
  */
-class Euler2Test {
+class Euler2Test extends EulerTest{
 
-  @Test def euler2() = {
+  override def solverAnswer : Long = 4613732L
+  override def createSolver() : EulerSolver = new Euler2(4000000)
 
-    val euler = new Euler2(4000000)
-    val result  = euler.solve
-
-    assertEquals( 4613732, result )
-  }
 }

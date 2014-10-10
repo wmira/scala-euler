@@ -1,15 +1,11 @@
 package euler
 
-import org.junit.Test
-import org.junit.Assert.assertEquals
+
+class Euler5Test extends EulerTest {
+
+  override def solverAnswer : Long = 232792560L
+  override def createSolver() : EulerSolver = new Euler5
 
 
-class Euler5Test {
-
-  @Test def euler5() = {
-    val euler = new Euler5
-    assertEquals(232792560,euler.solve )
-
-  }
 
 }

@@ -3,6 +3,8 @@ package euler
 import org.junit.Assert._
 import org.junit.{Before, Test}
 
+import scala.collection.mutable.ArrayBuffer
+
 /**
  *
  */
@@ -19,4 +21,5 @@ trait  EulerTest {
 
     assertEquals( solverAnswer, result )
   }
+
 }

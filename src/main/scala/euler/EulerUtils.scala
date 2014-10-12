@@ -1,5 +1,7 @@
 package euler
 
+import scala.collection.mutable.ArrayBuffer
+
 object EulerUtils {
 
   /**
@@ -35,7 +37,25 @@ object EulerUtils {
 
   }
 
+  def factors(input: BigInt) : ArrayBuffer[BigInt] = {
+
+    var result = ArrayBuffer[BigInt]()
+    val limit : BigInt = input/2 + 1 //EulerUtils.sqrt(input) + 1
+    var counter = 1
+    val increment = if ( input % 2 == 0 ) 1 else 2  //counter + 1 or 2, if even, we only test for even count
+
+    while ( counter <= limit ) {
+      if ( input % counter == 0 ) {
+        result += counter
+      }
+      counter += increment
+    }
+
+    return result
+  }
+
   def sqrt(number : BigInt) = {
+
     def next(n : BigInt, i : BigInt) : BigInt = (n + i/n) >> 1
 
     val one = BigInt(1)

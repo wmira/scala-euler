@@ -37,10 +37,10 @@ object EulerUtils {
 
   }
 
-  def factors(input: BigInt) : ArrayBuffer[BigInt] = {
+  def factors(input: Long) : ArrayBuffer[Long] = {
 
-    var result = ArrayBuffer[BigInt]()
-    val limit : BigInt = input/2 + 1 //EulerUtils.sqrt(input) + 1
+    var result = ArrayBuffer[Long]()
+    val limit : Long = input/2 + 1
     var counter = 1
     val increment = if ( input % 2 == 0 ) 1 else 2  //counter + 1 or 2, if even, we only test for even count
 
@@ -54,7 +54,7 @@ object EulerUtils {
     return result
   }
 
-  def sqrt(number : BigInt) = {
+  def sqrt(number : Long) : Double = {
 
     def next(n : BigInt, i : BigInt) : BigInt = (n + i/n) >> 1
 
@@ -72,6 +72,6 @@ object EulerUtils {
       n1 -= one
     }
 
-    n1
+    n1.doubleValue
   }
 }
